@@ -1,0 +1,86 @@
+/* Base color variables for light mode */
+:root {
+    --bg-color: #ffffff;
+    --text-color: rgb(0, 0, 14);
+  }
+  
+  /* Dark mode variables */
+  .dark-mode {
+    --bg-color: rgb(0, 0, 14);
+    --text-color: #ffffff;
+  }
+  
+  /* Apply theme colors with !important for higher priority */
+  body {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Force all elements to inherit the theme text color */
+  *, *::before, *::after {
+    color: var(--text-color) !important;
+  }
+  
+  /* Theme toggle styling (remains the same) */
+  .theme-toggle {
+    position: fixed;
+    top: 25px;
+    right: 10px;
+    z-index: 10000;
+  }
+  
+  #theme-switch {
+    display: none;
+  }
+  
+  .toggle-label {
+    cursor: pointer;
+    display: inline-block;
+  }
+  
+  .toggle-slider {
+    width: 60px;
+    height: 30px;
+    background-color: var(--text-color);
+    border: 1px solid blueviolet;
+    border-radius: 30px;
+    position: relative;
+    transition: background-color 0.3s ease;
+  }
+  
+  .toggle-icon {
+    position: absolute;
+    top: 2px;
+    left: 32px; /* For dark mode: moon on right */
+    width: 24px;
+    height: 24px;
+    border: 1px solid blueviolet;
+    background-color: var(--bg-color);
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 14px 14px;
+    transition: all 0.3s ease;
+    background-image: url("data:image/svg+xml,%3Csvg fill='%23ffffff' height='14' viewBox='0 0 24 24' width='14' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 3c-.132 0-.264.004-.394.012 2.306.224 4.261 1.256 5.73 2.696C19.2 7.17 20.234 9.124 20.458 11.43 20.966 11.3 21.484 11.228 22 11.228c-2.761 2.761-6.44 4.14-10.458 4.14-4.018 0-7.697-1.379-10.458-4.14 0 .516-.07 1.034-.202 1.55C4.758 16.115 8.29 18 12 18c3.71 0 7.242-1.885 9.66-4.64.132.516.202 1.034.202 1.55 0 1.306-.072 2.614-.202 3.92C19.242 19.884 15.71 21.77 12 21.77c-3.71 0-7.242-1.886-9.66-4.64-.132-.306-.202-.614-.202-.92 0-.306.07-.614.202-.92C4.758 8.115 8.29 6.23 12 6.23c3.71 0 7.242 1.885 9.66 4.64.132-.306.202-.614.202-.92 0-.306-.07-.614-.202-.92C19.242 4.116 15.71 2.23 12 2.23z'/%3E%3C/svg%3E");
+  }
+  
+  body:not(.dark-mode) .toggle-icon {
+    left: 4px;
+    background-image: url("data:image/svg+xml,%3Csvg fill='%2300000e' height='14' viewBox='0 0 24 24' width='14' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.76 4.84l-1.8-1.79L3.27 4.74l1.79 1.79 1.7-1.69zM1 11h3v2H1zm9-8h2v3h-2zm7.66 2.05l-1.79-1.79-1.41 1.41 1.79 1.79 1.41-1.41zM17 11h3v2h-3zm-5 5c-2.76 0-5-2.24-5-5 0-2.76 2.24-5 5-5 2.76 0 5 2.24 5 5 0 2.76-2.24 5-5 5zm0-8a3 3 0 100 6 3 3 0 000-6zm4.24 6.66l1.79 1.79 1.41-1.41-1.79-1.79-1.41 1.41zM4.22 16.24l-1.79 1.79 1.41 1.41 1.79-1.79-1.41-1.41z'/%3E%3C/svg%3E");
+  }
+  
+  body.dark-mode .toggle-slider {
+    background-color: rgb(0, 0, 14);
+  }
+  body:not(.dark-mode) .toggle-slider {
+    background-color: white;
+  }
+  
+
+  body.dark-mode .navbar {
+    background-color: var(--bg-color) !important;
+}
+body:not(.dark-mode) .navbar {
+    background-color: var(--bg-color) !important;
+}

@@ -1,0 +1,68 @@
+/* Light Mode (Default) */
+:root {
+    --bg-color: #ffffff;
+    --text-color: rgb(0, 0, 14);
+    --toggle-bg: #f0f0f0;
+    --toggle-color: rgb(0, 0, 14);
+}
+
+/* Dark Mode */
+.dark-mode {
+    --bg-color: rgb(0, 0, 14);
+    --text-color: #ffffff;
+    --toggle-bg: rgb(0, 0, 14);
+    --toggle-color: #ffffff;
+}
+
+/* Apply Theme */
+body {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Fix all elements using the theme */
+*, *::before, *::after {
+    color: var(--text-color) !important;
+}
+
+/* Navbar background fix */
+.navbar {
+    background-color: var(--bg-color) !important;
+}
+
+/* Theme Toggle Button (Bottom Right) */
+.theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--toggle-bg);
+    color: var(--toggle-color);
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover Effect */
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Mobile Optimization (320px screens) */
+@media (max-width: 320px) {
+    .theme-toggle {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        bottom: 10px;
+        right: 10px;
+    }
+}

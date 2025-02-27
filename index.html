@@ -9,11 +9,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
 <link rel="fonts" href="fonts/american_captain/American Captain.ttf">
+
+<link rel="stylesheet" href="./css/color2.css">
+<link rel="stylesheet" href="./css/styles.css">
+
 </head>
 <body>
     <header>
+
         <nav  class="navbar">
             <div class="logo">
                 <img src="images/ck.png" alt="Logo">
@@ -24,13 +28,30 @@
                 <a href="#Skills">Skills</a>
                 <a href="#Experience">Experience</a>
                 <a href="">Projects</a>
-                <a href="">Education</a>
-            </nav>
-            <div class="profile">
-                <a href="https://github.com/DeenathayalanCK" target="_blank">Github Profile </a>
-            </div>
+                <a href="#Education">Education</a>
+                <a href="https://github.com/DeenathayalanCK" target="_blank">Github Profile</a>
+            </nav>            
         </nav>
+        <nav class="navbar">
+            <div class="logo">
+              <img src="images/ck.png" alt="Logo">
+              <!-- Title -->
+            </div>
+            <!-- Hamburger button; initially hidden on large screens -->
+            <button id="menu-toggle" class="menu-toggle">☰</button>
+            <nav class="navbar2">
+              <a href="#About">About</a>
+              <a href="#Skills">Skills</a>
+              <a href="#Experience">Experience</a>
+              <a href="">Projects</a>
+              <a href="#Education">Education</a>
+            </nav>            
+            <div class="profile">
+              <a href="https://github.com/DeenathayalanCK" target="_blank">Github Profile</a>
+            </div>
+          </nav>
     </header>
+      
     <section id="About">
         <div class="part1">
             <div class="photoholder">
@@ -211,8 +232,194 @@
             </div>
         </div>   
     </section>
+
+<!----------------- Experience Section-------------->
+
     <section id="Experience">
-        <div class="exp">Experience</div>
+        <div class="experience-section">
+            <!-- Header -->
+            <div class="skill-title">
+              <h1>Experience</h1>
+            </div>
+            <div class="descrip">
+              <p>My work experience as a Developer and other roles on different clubs and team projects.</p>
+            </div>
+        
+            <!-- Experience Cards -->
+            <div class="experience-cards">
+        
+              <!-- Card 1 -->
+              <div class="experience-card">
+                <div class="iconWithTitle">
+                    <div class="experience-icon">
+                        <img src="icons/zpe_atm_logo.jpg" alt="Logo">
+                    </div>
+                    <div class="experience-title">
+                        <h4>Software Developer Intern</h4>
+                        <p>I-zet e-payments pvt Ltd</p>
+                        <p>February 2025 - Present</p>
+                    </div>
+                </div>
+
+                <div class="experience-content">
+                  <div class="experience-description">
+                    Assisted in developing and maintaining web applications, working on both frontend and backend technologies. Gained hands-on experience in coding, debugging, and integrating APIs to enhance functionality. Collaborated with teams to optimize user experience and improve system performance
+                  </div>
+                  <div class="experience-skills">
+                    <strong>Skills:</strong>
+                    <ul class="job-skills">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>ReactJS</li>
+                        <li>NextJS</li>
+                        <li>NodeJS</li>
+                        <li>MySQL</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Card 2 -->
+              <div class="experience-card">
+                <div class="iconWithTitle">
+                    <div class="experience-icon">
+                        <img src="icons/Make your Mark png color.png" alt="Logo">
+                    </div>
+                    <div class="experience-title">
+                        <h4>Secretary</h4>
+                        <p>Rotaract Club of Coimbatore</p>
+                        <p>July 2023 - June 2024</p>
+                    </div>
+                </div>
+                
+                <div class="experience-content">
+                  <div class="experience-description">
+                    Managed club operations, coordinated events, and maintained official records to ensure seamless communication between members and leadership. Organized impactful community service projects, collaborated with other clubs, and facilitated meetings to drive engagement and growth. 
+                    <div><i > &#9830; <strong>Awarded as Best Secretary in R. I. District 3201</strong></i></div>
+                </div>
+                  <div class="experience-skills">
+                    <strong>Skills:</strong>
+                    <ul class="job-skills">
+                        <li>Leadership</li>
+                        <li>Event Planning</li>
+                        <li>Communication</li>
+                        <li>Documentation</li>
+                        <li>Networking</li>
+                        <li>Decision-Making</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 3 -->
+              <div class="experience-card">
+                <div class="iconWithTitle">
+                    <div class="experience-icon">
+                        <img src="icons/zpe_atm_logo.jpg" alt="Logo">
+                    </div>
+                    <div class="experience-title">
+                        <h4>Software Developer Intern</h4>
+                        <p>I-zet e-payments pvt Ltd</p>
+                        <p>February 2025 - Present</p>
+                    </div>
+                </div>
+                
+                <div class="experience-content">
+                  <div class="experience-description">
+                    Assisted in developing and maintaining web applications, working on both frontend and backend technologies. Gained hands-on experience in coding, debugging, and integrating APIs to enhance functionality. Collaborated with teams to optimize user experience and improve system performance
+                  </div>
+                  <div class="experience-skills">
+                    <strong>Skills:</strong>
+                    <ul class="job-skills">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>ReactJS</li>
+                        <li>NextJS</li>
+                        <li>NodeJS</li>
+                        <li>MySQL</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+        
+            </div> <!-- .experience-cards -->
+          </div> <!-- .experience-section -->
     </section>
+
+    <!-------------Education-------------->
+    
+    <section id="Education">
+        <div class="experience-section">
+            <!-- Header -->
+            <div class="skill-title">
+            <h1>Education</h1>
+            </div>
+            <div class="descrip">
+            <p>My work experience as a Developer and other roles on different clubs and team projects.</p>
+            </div>
+        
+            <!-- Experience Cards -->
+            <div class="experience-cards">
+        
+            <!-- Card 1 -->
+            <div class="experience-card">
+                <div class="iconWithTitle">
+                    <div class="experience-icon">
+                        <img src="icons/zpe_atm_logo.jpg" alt="Logo">
+                    </div>
+                    <div class="experience-title">
+                        <h4>Software Developer Intern</h4>
+                        <p>I-zet e-payments pvt Ltd</p>
+                        <p>February 2025 - Present</p>
+                    </div>
+                </div>
+
+                <div class="experience-content">
+                <div class="experience-description">
+                    Assisted in developing and maintaining web applications, working on both frontend and backend technologies. Gained hands-on experience in coding, debugging, and integrating APIs to enhance functionality. Collaborated with teams to optimize user experience and improve system performance
+                </div>
+                <div class="experience-skills">
+                    <strong>Skills:</strong>
+                    <ul class="job-skills">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>ReactJS</li>
+                        <li>NextJS</li>
+                        <li>NodeJS</li>
+                        <li>MySQL</li>
+                    </ul>
+                </div>
+                </div>
+            </div>    
+            </div> <!-- .experience-cards -->
+        </div> <!-- .experience-section -->
+    </section>
+
+    <!-- Toggle button -->
+
+    <button id="theme-toggle" class="theme-toggle">
+        🌙
+    </button>
+    
+    <!-- FOOTER -->
+
+
+    <!-- <footer class="footer py-5">
+        <div class="container">
+             <div class="row">
+
+                  <div class="col-lg-12 col-12">                                
+                      <p class="copyright-text text-center">Copyright &copy; All rights reserved</p>
+                      <p class="copyright-text text-center">Designed by <a rel="nofollow" href="https://www.facebook.com/tooplate">Deenathayalan C K</a></p>
+                  </div>
+                  
+             </div>
+        </div>
+   </footer> -->
+
+   <script src="js/modal.js"></script>
+   <script src="js/color2.js"></script>
+   <script src="js/toggle.js"></script>
+
+
 </body>
 </html>
