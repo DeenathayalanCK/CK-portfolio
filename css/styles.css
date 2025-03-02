@@ -4,13 +4,16 @@
     box-sizing: border-box;
     font-family: 'Monsterrat','Poppins', sans-serif;
     scroll-behavior: smooth;
+
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
 }
 body {
     /* background-image: url('Black Panther.jpg');
     background-attachment: scroll;
     background-size: 100%;
     background-repeat: no-repeat; */
-    height:250000px;
+    height:auto;
     background-color: rgb(0, 0, 14);
     /* color: white; */
 }
@@ -197,38 +200,6 @@ width: 650px;
     color: white;
 }
 
-/* HTML: <div class="loader"></div> */
-/* .loader {
-    width: 40px;
-    height: 50px;
-    --c:no-repeat linear-gradient(to right, blueviolet, plum);
-    background:
-      var(--c) 0    100%/8px 45px,
-      var(--c) 50%  100%/8px 35px,
-      var(--c) 100% 100%/8px 25px;
-    position: relative;
-    clip-path: inset(-100% 0);
-  }
-  .loader:before{
-    content: "";
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: plum;
-    left: -16px;
-    top: 0;
-    animation: 
-      l5-1 2s   linear infinite,
-      l5-2 0.5s cubic-bezier(0,200,.8,200) infinite;
-  }
-  @keyframes l5-1 {
-    0%   {left:-16px;transform:translateY(-8px)}
-    100% {left:calc(100% + 8px);transform:translateY(22px)}
-  }
-  @keyframes l5-2 {
-    100% {top:-0.1px}
-  } */
 
   /* ----------------------------------------------Part 2- SKILLS--------------------------------------------------------------- */
 .whole-skills{
@@ -319,6 +290,11 @@ width: 650px;
     height: 100%;
 }
 
+.skill-icon-g{
+  height: 100%;
+  border-radius: 500px;
+}
+
 .skill-name{
     color: var(--text-color);
 }
@@ -355,7 +331,6 @@ width: 650px;
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-bottom: 0.5rem;
 }
 
   .experience-card {
@@ -395,6 +370,7 @@ width: 650px;
   .experience-icon img{
     height: 100%;
     width: 100%;
+    border-radius: 10px;
   }
 
   /* Right side content */
@@ -438,34 +414,221 @@ width: 650px;
 
 /* ----------------------Projects Section------------------------ */
 
+/* Projects Section Styling */
+#projects {
+  padding: 0px 20px;
+  background: var(--bg-color);                                /*  #f9f9f9 */
+}
+
+#projects h2 {
+  padding-top: 30px;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 3rem;
+  color: var(--text-color);
+}
+
+.projects-container {
+  display: grid;
+  margin-top: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-content: center;
+  gap: 50px;
+}
+
+.project-tile {
+  background: var(--bg-color);
+  border: 1px solid blueviolet;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: rgba(150, 56, 171, 0.65) 0px 4px 25px;;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.project-tile:hover {
+  transform: translateY(-10px);
+  box-shadow: rgba(150, 56, 171, 0.65) 0px 4px 25px;
+}
+
+.project-tile img {
+  padding: 5px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
 
+.project-info {
+  padding: 15px;
+}
+
+.project-info h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+.project-info .time-period,
+.project-info .skills,
+.project-info .short-description {
+  margin: 5px 0;
+  color: var(--text-color);
+}
+
+.project-info .github-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--bg-color);
+  background: linear-gradient(to right, blueviolet, plum);
+  padding: 8px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.project-info .github-link:hover {
+  background: blueviolet;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background: var(--bg-color);
+  color: var(--text-color);
+  margin: auto;
+  border-radius: 8px;
+  padding: 20px;
+  width: 80%;
+  max-width: 800px;
+  position: relative;
+}
+
+.modal-img-holder {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  object-fit: cover;
+}
 
 
+.modal-img-holder img.modal-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
 
+.modal-info {
+  margin-top: 20px;
+}
 
+.modal-info h3 {
+  margin: 0;
+  font-size: 2rem;
+  color: var(--text-color);
+}
 
+.modal-info p {
+  margin: 10px 0;
+  color: var(--text-color);
+}
 
+.modal-info a.modal-github {
+  display: inline-block;
+  margin-top: 15px;
+  color: var(--bg-color);
+  background: linear-gradient(to right, blueviolet, plum);
+  padding: 10px 15px;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
 
+.modal-info a.modal-github:hover {
+  box-shadow: rgba(150, 56, 171, 0.25) 0px 4px 25px;
+}
 
+.close {
+  z-index: 999;
+  position: absolute;
+  right: 20px;
+  top: 0px;
+  font-size: 28px;
+  font-weight: medium;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
 
 
 /* ----------------------Education Section------------------------ */
 
+.education-grade{
+  display: flex;
+  color: #94a3b8; /* Another subtle gray */
+  font-size: 14px;
+}
 
+.education-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
 
+/* ---------------Footer--------------- */
 
+.footer {
+  background-color:var(--bg-color);
+  color:var(--text-color);
+  padding: 20px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+/* Individual sections styling */
+.footer-section {
+  margin: 10px 0;
+}
 
+/* Social icons styling */
+.footer-section.social-icons a {
+  margin: 0 10px;
+  display: inline-block;
+}
 
+.footer-section.social-icons img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s;
+  background: linear-gradient(to right, blueviolet, plum) ;
+}
 
-
-
-
-
-
-
-
+.footer-section.social-icons img:hover {
+  transform: scale(1.2);
+}
 
 /* -------------Media query -------------*/
 
@@ -569,11 +732,16 @@ width: 650px;
     .experience-cards {
       padding: 20px;
     }
+    .skill-title{
+      font-size: 1.25em;
+    }
+    .descrip{
+      font-size: 20px;
+    }
   }
 
-
   /* Default: Show full navbar on larger screens */
-.navbar2 {
+  .navbar2 {
     display: flex;
     justify-content: space-between;
     gap: 25px;
@@ -645,7 +813,20 @@ width: 650px;
     }
   }
   
+  /* Responsive Media Query */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+    padding: 15px;
+  }
   
+  .project-info h3 {
+    font-size: 1.3rem;
+  }
+}
+
+
+
   /* .navbar {
     display: flex;
     justify-content: space-between;

@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
         menuToggle.style.display = "none";
       }
     }
-  
+    
     // Initial check on page load
     adjustNavbarDisplay();
   
@@ -33,6 +33,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // Toggle the navbar when the hamburger button is clicked (only active on small screens)
     menuToggle.addEventListener("click", function() {
       navbar2.classList.toggle("active");
+    });
+    // Close the navbar when a link is clicked (only active on small screens)
+    navbar2.addEventListener("click", function() {
+      navbar2.classList.remove("active");
     });
   });
   
