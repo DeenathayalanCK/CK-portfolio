@@ -621,9 +621,8 @@ width: 650px;
   width: 30px;
   height: 30px;
   object-fit: contain;
-  filter: brightness(0) invert(1);
   transition: transform 0.3s;
-  background: linear-gradient(to right, blueviolet, plum) ;
+  background: transparent;
 }
 
 .footer-section.social-icons img:hover {
