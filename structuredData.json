@@ -1,0 +1,15 @@
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Deenathayalan C K",
+    "url": "https://deenathayalanck.github.io/CK-portfolio/",
+    "sameAs": [
+      "https://www.linkedin.com/in/deenathayalan-c-k-3a823a230/",
+      "https://www.instagram.com/deenathayalan_ck",
+      "https://github.com/DeenathayalanCK"
+    ],
+    "jobTitle": "AI/ML Developer",
+    "description": "An enthusiastic AI/ML developer with expertise in Python, AI-ML, TensorFlow, full-stack development, and innovative project execution.",
+    "image": "https://github.com/DeenathayalanCK/CK-portfolio/blob/master/images/ck-black.png"
+  }
+  
