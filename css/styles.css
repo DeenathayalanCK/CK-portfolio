@@ -429,14 +429,22 @@ width: 650px;
 }
 
 .projects-container {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  align-content: center;
+  flex-direction: row;
+  justify-content: center;
+  align-content: space-between;  
   gap: 50px;
 }
 
 .project-tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 10px;
   background: var(--bg-color);
   border: 1px solid blueviolet;
   border-radius: 8px;
@@ -444,6 +452,8 @@ width: 650px;
   box-shadow: rgba(150, 56, 171, 0.65) 0px 4px 25px;;
   transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
+  max-width: 300px;
+  max-height: 450px;
 }
 
 .project-tile:hover {
@@ -451,34 +461,60 @@ width: 650px;
   box-shadow: rgba(150, 56, 171, 0.65) 0px 4px 25px;
 }
 
-.project-tile img {
+.project-image {
+  display: flex;
+  justify-content: center;
+  max-width: 100% ;
+  max-height: 40%;
+  height: auto;
+}
+
+.project-image img {
   padding: 5px;
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
 }
 
 
 .project-info {
-  padding: 15px;
+  padding: 0px;
 }
 
 .project-info h3 {
-  margin: 0;
+  margin: 0 !important; 
   font-size: 1.5rem;
   color: var(--text-color);
 }
 
-.project-info .time-period,
-.project-info .skills,
-.project-info .short-description {
+.project-info .skills
+  {
   margin: 5px 0;
   color: var(--text-color);
 }
 
+.project-info .time-period{
+  margin: 0px;
+  color: var(--text-color);
+}
+
+.short-description{
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limits text to 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.projectsContent{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:start;
+  gap: 5px;
+}
+
+
 .project-info .github-link {
   display: inline-block;
-  margin-top: 10px;
   color: var(--bg-color);
   background: linear-gradient(to right, blueviolet, plum);
   padding: 8px 12px;
@@ -489,7 +525,7 @@ width: 650px;
 }
 
 .project-info .github-link:hover {
-  background: blueviolet;
+  color: var(--bg-color) !important;
 }
 
 /* Modal Styles */
@@ -560,6 +596,7 @@ width: 650px;
 }
 
 .modal-info a.modal-github:hover {
+  color: var(--bg-color) !important;
   box-shadow: rgba(150, 56, 171, 0.25) 0px 4px 25px;
 }
 
@@ -711,7 +748,7 @@ width: 650px;
   }
 
   /* Use two-column layout for cards on medium to large screens */
-  @media (min-width: 768px) and (max-width: 1024px) {
+  @media (min-width: 769px) and (max-width: 1024px) {
     .experience-cards {
       display: grid;
       grid-template-columns: repeat(1fr);
@@ -727,7 +764,7 @@ width: 650px;
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 769px) {
     .experience-cards {
       padding: 20px;
     }
@@ -756,8 +793,8 @@ width: 650px;
     cursor: pointer;
   }
   
-  /* Responsive: When viewport is less than 768px */
-  @media screen and (max-width: 768px) {
+  /* Responsive: When viewport is less than 769px */
+  @media screen and (max-width: 769px) {
     /* Hide the entire profile container on mobile */
     .profile {
       display: none;
@@ -813,7 +850,7 @@ width: 650px;
   }
   
   /* Responsive Media Query */
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .modal-content {
     width: 90%;
     padding: 15px;
@@ -823,6 +860,7 @@ width: 650px;
     font-size: 1.3rem;
   }
 }
+
 
 
 
