@@ -1,6 +1,6 @@
 /* Light Mode (Default) */
 :root {
-    --bg-color: #ffffff;
+    --bg-color: #f0f0f0;
     --text-color: rgb(0, 0, 14);
     --toggle-bg: #f0f0f0;
     --toggle-color: rgb(0, 0, 14);
@@ -9,9 +9,9 @@
 /* Dark Mode */
 .dark-mode {
     --bg-color: rgb(0, 0, 14);
-    --text-color: #ffffff;
+    --text-color: #f0f0f0;
     --toggle-bg: rgb(0, 0, 14);
-    --toggle-color: #ffffff;
+    --toggle-color: #f0f0f0;
 }
 
 /* Apply Theme */

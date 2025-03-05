@@ -4,7 +4,6 @@
     box-sizing: border-box;
     font-family: 'Monsterrat','Poppins', sans-serif;
     scroll-behavior: smooth;
-
     -webkit-user-select: none;
     -webkit-user-drag: none;
 }
