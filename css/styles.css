@@ -630,6 +630,76 @@ width: 650px;
   gap: 10px;
 }
 
+/* ------------------contact me section---------------------- */
+
+.contact-section {
+  width: 60%;
+  margin: 20px auto;
+  background: var(--bg-color);
+  padding: 40px;
+  border: 1px solid blueviolet;
+  box-shadow: rgba(150, 56, 171, 0.25) 0px 4px 24px;
+  border-radius: 8px;
+}
+
+.contact-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--text-color);
+}
+
+.contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.contact-form .form-group {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form .form-group.full-width {
+  flex: 1 1 100%;
+}
+
+.contact-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid rgba(211, 211, 211, 0.6);
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: rgb(255, 255, 255);
+  color: black !important;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.contact-form button {
+  padding: 15px 30px;
+  border: none;
+  background: linear-gradient(to right, blueviolet, plum);
+  color: var(--text-color);
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  color: var(--bg-color) !important;
+}
+
+
 /* ---------------Footer--------------- */
 
 .footer {
@@ -860,11 +930,13 @@ width: 650px;
   }
 }
 
-
-
-
-  /* .navbar {
-    display: flex;
-    justify-content: space-between;
-
-  } */
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .contact-section {
+    width: 90%;
+    padding: 20px;
+  }
+  .contact-form .form-group {
+    flex: 1 1 100%;
+  }
+}
