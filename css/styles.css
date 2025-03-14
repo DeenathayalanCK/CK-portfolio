@@ -671,6 +671,8 @@ width: 650px;
 
 .contact-form input,
 .contact-form textarea {
+  width: 100%;
+  box-sizing: border-box;
   padding: 10px;
   border: 1px solid rgba(211, 211, 211, 0.6);
   border-radius: 4px;
@@ -678,6 +680,7 @@ width: 650px;
   background-color: rgb(255, 255, 255);
   color: black !important;
 }
+
 
 .contact-form textarea {
   resize: vertical;
@@ -690,6 +693,7 @@ width: 650px;
   background: linear-gradient(to right, blueviolet, plum);
   color: var(--text-color);
   font-size: 1rem;
+  font-weight: 700px;
   border-radius: 4px;
   cursor: pointer;
   transition: background 0.3s ease;
@@ -938,5 +942,10 @@ width: 650px;
   }
   .contact-form .form-group {
     flex: 1 1 100%;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    box-sizing: border-box;
   }
 }
